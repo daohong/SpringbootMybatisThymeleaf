@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script th:src="@{/static/js/test.js}"></script>
+		<link th:href="@{/static/css/css.css}" rel="stylesheet" type="text/css"/>
+		
+		<!-- <link rel="stylesheet" href="wcss.css" type="text/css" /> -->
+	</head>
+	<body>
+		<p>hello  hello  hello </p>
+		<div>
+			用户姓名：<input th:id="${user.name}" th:name="${user.name}" th:value="${user.name}"/>
+			<br/>
+			用户年龄：<input th:value="${user.age}"/>
+			<br/>
+			用户生日：<input th:value="${user.birthday}"/>
+			<br/>
+			用户生日：<input th:value="${#dates.format(user.birthday, 'yyyy-MM-dd')}"/>
+			<br/>
+		</div>
+	</body>
+</html>
